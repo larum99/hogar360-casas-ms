@@ -1,0 +1,4 @@
+package com.hogar360.category.category.application.dto.response;
+
+public record CategoryResponse() {
+}
