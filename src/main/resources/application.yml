@@ -5,7 +5,7 @@ spring:
   application:
     name: hogar360-casas-ms
   datasource:
-    url: jdbc:mysql://localhost/hogar360_casas
+    url: jdbc:mysql://localhost/hogar360_houses
     username: ${user}
     password: ${password}
   jpa:

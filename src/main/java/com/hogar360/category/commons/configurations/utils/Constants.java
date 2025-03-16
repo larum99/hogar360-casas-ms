@@ -1,6 +1,6 @@
 package com.hogar360.category.commons.configurations.utils;
 
-public final class Constants {
+public final     class Constants {
     private Constants() {
         throw new IllegalStateException("Utility class");
     }

@@ -1,4 +1,7 @@
 package com.hogar360.category.category.application.dto.response;
 
-public record SaveCategoryResponse(Long id, String name, String description) {
+import java.time.LocalDateTime;
+
+public record SaveCategoryResponse(String message, LocalDateTime time) {
 }
+
