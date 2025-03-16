@@ -1,5 +1,9 @@
 package com.hogar360.category.category.domain.model;
 
+import com.hogar360.category.category.domain.exceptions.DescriptionMaxSizeExceededException;
+import com.hogar360.category.category.domain.exceptions.NameMaxSizeExceededException;
+import com.hogar360.category.category.domain.utils.constants.DomainConstants;
+
 import java.util.Objects;
 
 public class CategoryModel {
