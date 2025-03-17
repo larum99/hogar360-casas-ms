@@ -22,4 +22,9 @@ public class CategoryUseCase implements CategoryServicePort {
         }
         categoryPersistencePort.save(categoryModel);
     }
+
+    @Override
+    public List<CategoryModel> getCategories(Integer page, Integer size, boolean orderAsc) {
+        return categoryPersistencePort.getCategories(page, size, orderAsc);
+    }
 }
