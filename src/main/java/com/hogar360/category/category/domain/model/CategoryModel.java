@@ -3,14 +3,10 @@ package com.hogar360.category.category.domain.model;
 import com.hogar360.category.category.domain.exceptions.DescriptionMaxSizeExceededException;
 import com.hogar360.category.category.domain.exceptions.NameMaxSizeExceededException;
 import com.hogar360.category.category.domain.utils.constants.DomainConstants;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Objects;
 
-@Getter
 public class CategoryModel {
-    @Setter
     private Long id;
     private String name;
     private String description;
@@ -23,9 +19,25 @@ public class CategoryModel {
         this.description = Objects.requireNonNull(description,  DomainConstants.FIELD_DESCRIPTION_NULL_MESSAGE);
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         if (name.length() > 50) throw new NameMaxSizeExceededException();
         this.name = Objects.requireNonNull(name, DomainConstants.FIELD_NAME_NULL_MESSAGE);
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setDescription(String description) {
