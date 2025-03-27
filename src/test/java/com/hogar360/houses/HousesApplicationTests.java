@@ -1,10 +1,10 @@
-package com.hogar360.category;
+package com.hogar360.houses;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CategoryApplicationTests {
+class HousesApplicationTests {
 
 	@Test
 	void contextLoads() {

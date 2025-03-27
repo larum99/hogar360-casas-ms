@@ -1,8 +1,8 @@
 package com.hogar360.houses.houses.infraestructure.exceptionshandler;
 
 import com.hogar360.houses.houses.domain.exceptions.CategoryAlreadyExistsException;
-import com.hogar360.houses.houses.domain.exceptions.DescriptionMaxSizeExceededException;
-import com.hogar360.houses.houses.domain.exceptions.NameMaxSizeExceededException;
+import com.hogar360.houses.houses.domain.exceptions.CategoryDescriptionMaxSizeExceededException;
+import com.hogar360.houses.houses.domain.exceptions.CategoryNameMaxSizeExceededException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,15 +11,15 @@ import java.time.LocalDateTime;
 
 @ControllerAdvice
 public class ControllerAdvisor {
-    @ExceptionHandler(NameMaxSizeExceededException.class)
-    public ResponseEntity<ExceptionResponse> handleNameMaxSizeExceededException(NameMaxSizeExceededException exception) {
-        return ResponseEntity.badRequest().body(new ExceptionResponse(ExceptionConstants.NAME_MAX_SIZE_MESSAGE,
+    @ExceptionHandler(CategoryNameMaxSizeExceededException.class)
+    public ResponseEntity<ExceptionResponse> handleNameMaxSizeExceededException(CategoryNameMaxSizeExceededException exception) {
+        return ResponseEntity.badRequest().body(new ExceptionResponse(ExceptionConstants.CATEGORY_NAME_MAX_SIZE_MESSAGE,
                 LocalDateTime.now()));
     }
 
-    @ExceptionHandler(DescriptionMaxSizeExceededException.class)
-    public ResponseEntity<ExceptionResponse> handleDescriptionMaxSizeExceededException(DescriptionMaxSizeExceededException exception) {
-        return ResponseEntity.badRequest().body(new ExceptionResponse(ExceptionConstants.DESCRIPTION_MAX_SIZE_MESSAGE,
+    @ExceptionHandler(CategoryDescriptionMaxSizeExceededException.class)
+    public ResponseEntity<ExceptionResponse> handleDescriptionMaxSizeExceededException(CategoryDescriptionMaxSizeExceededException exception) {
+        return ResponseEntity.badRequest().body(new ExceptionResponse(ExceptionConstants.CATEGORY_DESCRIPTION_MAX_SIZE_MESSAGE,
                 LocalDateTime.now()));
     }
 
